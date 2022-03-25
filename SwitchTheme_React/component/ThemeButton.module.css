@@ -1,0 +1,89 @@
+.themebtnContainer{
+   padding: 8px 18px;
+   display: inline-block;
+   border-radius: 30px;
+}
+.switch {
+   position: relative;
+   display: inline-block;
+   width: 48px;
+   height: 26px;
+   cursor: pointer;
+}
+ 
+.switch .themeInput {
+   position: absolute;
+   opacity: 0;
+   width: inherit;
+   height: inherit;
+   z-index: 10;
+   margin: 0;
+}
+ 
+.slider {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   cursor: pointer;
+   background-color: #111d2c;
+   -webkit-transition: 0.4s;
+   transition: 0.4s;
+   border: 1px solid seagreen;
+   z-index: 5;
+}
+ 
+/* .slider:before {
+   position: absolute;
+   content: "";
+   height: 18px;
+   width: 18px;
+   top: 2px;
+   left: 2px;
+   bottom: 1px;
+   background-color: #ccc;
+   -webkit-transition: 0.4s;
+   transition: 0.4s;
+} */
+ 
+.themeInput:checked + .slider {
+   background-color: #111d2c;
+ }
+ 
+.themeInput:focus + .slider {
+   box-shadow: 0 0 1px #111d2c;
+}
+ 
+.themeInput:checked + .slider:before {
+   -webkit-transform: translateX(21px) translateY(2px);
+   -ms-transform: translateX(21px) translateY(2px);
+   transform: translateX(21px) translateY(2px);
+   background-color: #ccc;
+}
+ /* Rounded sliders */
+.slider.round {
+   border-radius: 34px;
+}
+ 
+.slider.round:before {
+   border-radius: 50%;
+}
+.active{
+   height: 22px;
+   width: 22px;
+   -webkit-transform: translateX(4px) translateY(1px);
+   -ms-transform: translateX(4px) translateY(1px);
+   transform: translateX(4px) translateY(1px);
+   -webkit-transition: 0.4s;
+   transition: 0.4s;
+}
+.activeNight{
+   color: black!important;
+   -webkit-transform: translateX(21px) translateY(1px);
+   -ms-transform: translateX(21px) translateY(1px);
+   transform: translateX(21px) translateY(1px);
+}
+.activeDay{
+   color: rgb(253, 153, 4)!important;
+}
